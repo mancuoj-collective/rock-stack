@@ -1,3 +1,4 @@
+import { Link } from '@nextui-org/react'
 import type { MetaFunction } from '@remix-run/node'
 
 export const meta: MetaFunction = () => {
@@ -6,12 +7,19 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="h-dvh flex items-center justify-center">
-      <h1 className="text-3xl font-serif text-slate-700">
+    <div className="flex h-dvh items-center justify-center">
+      <h1 className="font-serif text-3xl">
         Welcome to{' '}
-        <a target="_blank" href="https://remix.run/docs" rel="noreferrer" className="hover:underline">
+        <Link
+          className="text-3xl"
+          href="https://remix.run/docs"
+          color="foreground"
+          underline="hover"
+          isExternal
+          showAnchorIcon
+        >
           Remix
-        </a>
+        </Link>
       </h1>
     </div>
   )
