@@ -3,28 +3,32 @@
   "scripts": {
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "start": "remix-serve ./build/server/index.js"
+    "start": "remix-serve ./build/server/index.js",
+    "format": "prettier --cache --write ."
   },
   "dependencies": {
     "@remix-run/node": "^2.8.1",
     "@remix-run/react": "^2.8.1",
     "@remix-run/serve": "^2.8.1",
-    "isbot": "^5.1.3",
+    "isbot": "^5.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@mancuoj/prettier-config": "^0.1.4",
     "@remix-run/dev": "^2.8.1",
-    "@types/react": "^18.2.73",
-    "@types/react-dom": "^18.2.23",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.3",
-    "vite": "^5.2.7",
+    "typescript": "^5.4.4",
+    "vite": "^5.2.8",
     "vite-tsconfig-paths": "^4.3.2"
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "prettier": "@mancuoj/prettier-config"
 }
