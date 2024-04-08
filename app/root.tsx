@@ -1,6 +1,8 @@
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
-import type { LinksFunction } from '@remix-run/node'
+import type { LinksFunction, MetaFunction } from '@remix-run/node'
 import stylesheet from '~/styles/global.css?url'
+
+export const meta: MetaFunction = () => [{ title: 'Remix' }]
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }]
 
