@@ -3,7 +3,7 @@ import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/reac
 import { GlobalLoading } from '~/components/global-loading'
 import stylesheet from '~/styles/globals.css?url'
 
-export const meta: MetaFunction = () => [{ title: 'Remix Rock Stack' }]
+export const meta: MetaFunction = () => [{ title: 'Rock Stack' }]
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }]
 
