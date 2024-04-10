@@ -1,8 +1,9 @@
 import type { LinksFunction, MetaFunction } from '@remix-run/node'
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
+import { GlobalLoading } from '~/components/global-loading'
 import stylesheet from '~/styles/globals.css?url'
 
-export const meta: MetaFunction = () => [{ title: 'Remix' }]
+export const meta: MetaFunction = () => [{ title: 'Remix Rock Stack' }]
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }]
 
@@ -16,6 +17,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <GlobalLoading />
         {children}
         <ScrollRestoration />
         <Scripts />
