@@ -17,13 +17,13 @@
   "devDependencies": {
     "@mancuoj/prettier-config": "^0.1.4",
     "@remix-run/dev": "^2.8.1",
-    "@types/react": "^18.2.74",
+    "@types/react": "^18.2.75",
     "@types/react-dom": "^18.2.24",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "vite": "^5.2.8",
     "vite-tsconfig-paths": "^4.3.2"
   },

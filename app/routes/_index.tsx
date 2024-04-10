@@ -3,7 +3,7 @@ export default function Index() {
     <div className="flex h-dvh items-center justify-center">
       <h1 className="font-serif text-3xl">
         Welcome to{' '}
-        <a target="_blank" href="https://remix.run/docs" rel="noreferrer" className="hover:underline">
+        <a target="_blank" href="https://remix.run/docs" rel="noreferrer noopener" className="hover:underline">
           Remix
         </a>
       </h1>
