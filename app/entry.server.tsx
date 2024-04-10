@@ -1,5 +1,5 @@
 import { PassThrough } from 'node:stream'
-import type { AppLoadContext, EntryContext } from '@remix-run/node'
+import type { EntryContext } from '@remix-run/node'
 import { createReadableStreamFromReadable } from '@remix-run/node'
 import { RemixServer } from '@remix-run/react'
 import { isbot } from 'isbot'
@@ -50,9 +50,7 @@ function handleBotRequest(
         },
         onError(error: unknown) {
           responseStatusCode = 500
-          if (shellRendered) {
-            console.error(error)
-          }
+          if (shellRendered) console.error(error)
         },
       },
     )
@@ -93,9 +91,7 @@ function handleBrowserRequest(
         },
         onError(error: unknown) {
           responseStatusCode = 500
-          if (shellRendered) {
-            console.error(error)
-          }
+          if (shellRendered) console.error(error)
         },
       },
     )
