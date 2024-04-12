@@ -1,7 +1,10 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node'
-import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react'
+import type { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node'
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react'
+import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes'
 import { GlobalLoading } from '~/components/global-loading'
+import { themeSessionResolver } from '~/utils/session.server'
 import stylesheet from '~/styles/globals.css?url'
+import { cn } from '~/utils/cn'
 
 export const meta: MetaFunction = () => [{ title: 'Rock Stack' }]
 
@@ -14,18 +17,27 @@ export const links: LinksFunction = () => [
   { rel: 'stylesheet', href: stylesheet },
 ]
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export async function loader({ request }: LoaderFunctionArgs) {
+  const { getTheme } = await themeSessionResolver(request)
+  return { theme: getTheme() }
+}
+
+export function App() {
+  const data = useLoaderData<typeof loader>()
+  const [theme] = useTheme()
+
   return (
-    <html lang="en">
+    <html lang="en" className={cn(theme)}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
+        <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
       </head>
       <body>
         <GlobalLoading />
-        {children}
+        <Outlet />
         <ScrollRestoration />
         <Scripts />
       </body>
@@ -33,6 +45,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
-export default function App() {
-  return <Outlet />
+export default function AppWithProviders() {
+  const data = useLoaderData<typeof loader>()
+  return (
+    <ThemeProvider specifiedTheme={data.theme} themeAction="/action/set-theme">
+      <App />
+    </ThemeProvider>
+  )
 }

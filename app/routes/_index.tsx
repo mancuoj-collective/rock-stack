@@ -1,4 +1,5 @@
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
+import { ThemeToggle } from '~/components/theme-toggle'
 import { Button } from '~/components/ui/button'
 
 export default function Index() {
@@ -19,6 +20,7 @@ export default function Index() {
               GitHub
             </a>
           </Button>
+          <ThemeToggle />
         </div>
       </div>
     </div>
