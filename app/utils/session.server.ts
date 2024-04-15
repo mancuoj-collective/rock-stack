@@ -14,5 +14,3 @@ const sessionStorage = createCookieSessionStorage({
 })
 
 export const themeSessionResolver = createThemeSessionResolver(sessionStorage)
-
-export const { getSession, commitSession, destroySession } = sessionStorage
