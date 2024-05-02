@@ -20,6 +20,3 @@ timeout = "5s"
 cpu_kind = "shared"
 cpus = 1
 memory = "1gb"
-
-[env]
-DATABASE_URL = "file:./data/sqlite.db"
