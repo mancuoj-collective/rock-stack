@@ -2,9 +2,9 @@ import type { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run
 import { Links, Meta, Outlet, Scripts, ScrollRestoration, useLoaderData } from '@remix-run/react'
 import { PreventFlashOnWrongTheme, ThemeProvider, useTheme } from 'remix-themes'
 import { GlobalLoading } from '~/components/global-loading'
-import { themeSessionResolver } from '~/utils/session.server'
 import stylesheet from '~/styles/globals.css?url'
 import { cn } from '~/utils/cn'
+import { themeSessionResolver } from '~/utils/session.server'
 
 export const meta: MetaFunction = () => [{ title: 'Rock Stack' }]
 
@@ -35,7 +35,7 @@ export function App() {
         <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)} />
         <Links />
       </head>
-      <body>
+      <body className={cn('min-h-dvh font-sans antialiased')}>
         <GlobalLoading />
         <Outlet />
         <ScrollRestoration />

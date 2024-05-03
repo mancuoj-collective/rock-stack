@@ -1,5 +1,5 @@
-import { Theme, useTheme } from 'remix-themes'
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons'
+import { Theme, useTheme } from 'remix-themes'
 import { Button } from '~/components/ui/button'
 
 export function ThemeToggle() {
