@@ -1,4 +1,4 @@
-import { TypeOf, z } from 'zod'
+import { type TypeOf, z } from 'zod'
 
 const envSchema = z.object({
   SESSION_SECRET: z.string().min(1),
