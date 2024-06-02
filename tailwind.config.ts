@@ -3,6 +3,7 @@ import svgToDataUri from 'mini-svg-data-uri'
 import twAnimate from 'tailwindcss-animate'
 import twScrollbar from 'tailwind-scrollbar'
 import twTypography from '@tailwindcss/typography'
+import defaultTheme from 'tailwindcss/defaultTheme'
 // @ts-expect-error no type
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
 
@@ -25,6 +26,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
+        serif: ['"Source Serif 4 Variable"', ...defaultTheme.fontFamily.serif],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',

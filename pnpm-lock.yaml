@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/inter':
+        specifier: ^5.0.18
+        version: 5.0.18
+      '@fontsource-variable/source-serif-4':
+        specifier: ^5.0.19
+        version: 5.0.19
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.0.6
         version: 2.0.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -573,6 +579,12 @@ packages:
     resolution: {integrity: sha512-BVkXM2K/jLLYBFos1gT/bYv0YPJue8L4j0dkIsskJI4JRn6rPA9bZjT4sJzkzhdubZuwRGG9cgxj4Cfgt4lHlw==}
     engines: {node: '>=16.0.0'}
     hasBin: true
+
+  '@fontsource-variable/inter@5.0.18':
+    resolution: {integrity: sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==}
+
+  '@fontsource-variable/source-serif-4@5.0.19':
+    resolution: {integrity: sha512-ZAVxXe44btg0R44EHVbL9H4P0XRwhheqAkBowWOXyOb8Lx/25TiIoI0DON4AIfVmpKbxYtqL3FV0JV5+C3gfyg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -3648,6 +3660,10 @@ snapshots:
       ejs: 3.1.9
       shell-quote: 1.8.1
       yargs: 17.7.2
+
+  '@fontsource-variable/inter@5.0.18': {}
+
+  '@fontsource-variable/source-serif-4@5.0.19': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:

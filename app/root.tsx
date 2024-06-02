@@ -5,6 +5,8 @@ import { GlobalLoading } from '~/components/global-loading'
 import stylesheet from '~/styles/globals.css?url'
 import { cn } from '~/utils/cn'
 import { themeSessionResolver } from '~/utils/session.server'
+import '@fontsource-variable/inter'
+import '@fontsource-variable/source-serif-4'
 
 export const meta: MetaFunction = () => [{ title: 'Rock Stack' }]
 
